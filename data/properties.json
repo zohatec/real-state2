@@ -1,0 +1,192 @@
+{
+  "site": "BariKhoj — বাড়িখোঁজ",
+  "updated": "2026-11-10",
+  "currency": "BDT",
+  "note": "All listings are demo data for a portfolio project. Prices follow realistic per-sqft rates of the respective Dhaka/Chattogram/Sylhet neighbourhoods.",
+  "properties": [
+    {
+      "id": "P-101",
+      "status": "sale",
+      "featured": true,
+      "type": "apartment",
+      "city": "dhaka",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 32000000, "bn": "৳ ৩.২০ কোটি", "en": "৳ 3.20 Cr" },
+      "title": { "bn": "গুলশান-২ লেকভিউ পেন্টহাউস", "en": "Gulshan-2 Lakeview Penthouse" },
+      "location": { "bn": "গুলশান-২, ঢাকা", "en": "Gulshan-2, Dhaka" },
+      "mapQuery": "Gulshan 2 Circle, Dhaka, Bangladesh",
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2150,
+      "desc": {
+        "bn": "১৬ তলা ভবনের শীর্ষ ফ্লোরে দক্ষিণমুখী পেন্টহাউস — সরাসরি গুলশান লেক ও সিটি স্কাইলাইন ভিউ। ইম্পোর্টেড ফিটিংস, স্মার্ট হোম অটোমেশন ও ২টি নিজস্ব কার পার্কিংসহ প্রিমিয়াম লাইফস্টাইলের সম্পূর্ণ প্যাকেজ।",
+        "en": "South-facing penthouse on the top floor of a 16-storey tower with direct Gulshan lake and city skyline views. Imported fittings, smart-home automation and 2 dedicated parking spaces."
+      },
+      "features": {
+        "bn": ["লিফট", "জেনারেটর ব্যাকআপ", "২টি কার পার্কিং", "গ্যাস লাইন", "CCTV সিকিউরিটি", "স্মার্ট হোম অটোমেশন", "সার্ভেন্ট কোয়ার্টার", "রূফটপ অ্যাক্সেস"],
+        "en": ["Elevator", "Generator backup", "2 car parking", "Gas line", "CCTV security", "Smart home automation", "Servant quarter", "Rooftop access"]
+      }
+    },
+    {
+      "id": "P-102",
+      "status": "sale",
+      "featured": true,
+      "type": "apartment",
+      "city": "dhaka",
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 18500000, "bn": "৳ ১.৮৫ কোটি", "en": "৳ 1.85 Cr" },
+      "title": { "bn": "ধানমন্ডি লেক সাইড ফ্যামিলি ফ্ল্যাট", "en": "Dhanmondi Lakeside Family Flat" },
+      "location": { "bn": "ধানমন্ডি ২৭, ঢাকা", "en": "Dhanmondi 27, Dhaka" },
+      "mapQuery": "Dhanmondi 27, Dhaka, Bangladesh",
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1650,
+      "desc": {
+        "bn": "ধানমন্ডি লেকের ঠিক সামনে দক্ষিণমুখী ফ্যামিলি ফ্ল্যাট। বিখ্যাত স্কুল-কলেজ ও হাসপাতালের হাতের নাগালে; প্রশস্ত লিভিং-ডাইনিং ও মাস্টার বেডরুমে ব্যালকনি।",
+        "en": "South-facing family flat right across Dhanmondi Lake, within walking distance of top schools, colleges and hospitals. Spacious living-dining and a master bedroom balcony."
+      },
+      "features": {
+        "bn": ["লিফট", "জেনারেটর", "১টি কার পার্কিং", "গ্যাস লাইন", "লেক ভিউ ব্যালকনি", "প্লে এরিয়া", "ফায়ার সেফটি"],
+        "en": ["Elevator", "Generator", "1 car parking", "Gas line", "Lake-view balcony", "Play area", "Fire safety"]
+      }
+    },
+    {
+      "id": "P-103",
+      "status": "sale",
+      "featured": false,
+      "type": "apartment",
+      "city": "dhaka",
+      "image": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 11000000, "bn": "৳ ১.১০ কোটি", "en": "৳ 1.10 Cr" },
+      "title": { "bn": "বসুন্ধরা আর/এ ফ্যামিলি ফ্ল্যাট", "en": "Bashundhara R/A Family Flat" },
+      "location": { "bn": "বসুন্ধরা আর/এ ব্লক-সি, ঢাকা", "en": "Bashundhara R/A Block-C, Dhaka" },
+      "mapQuery": "Bashundhara Residential Area Block C, Dhaka, Bangladesh",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1350,
+      "desc": {
+        "bn": "বসুন্ধরা আর/এ ব্লক-সি-তে নতুন ওয়েল-মেইনটেইনড ফ্ল্যাট। আশপাশে স্কুল, মসজিদ ও কমিউনিটি মার্কেট; পরিবারের জন্য আদর্শ ও বাজেট-ফ্রেন্ডলি অপশন।",
+        "en": "A well-maintained flat in Bashundhara R/A Block-C with schools, a mosque and community market nearby — an ideal, budget-friendly choice for families."
+      },
+      "features": {
+        "bn": ["লিফট", "জেনারেটর", "কার পার্কিং", "গ্যাস লাইন", "কমিউনিটি মার্কেট নিকটে", "মসজিদ নিকটে", "স্কুল ভ্যান সার্ভিস"],
+        "en": ["Elevator", "Generator", "Car parking", "Gas line", "Near community market", "Near mosque", "School van service"]
+      }
+    },
+    {
+      "id": "P-104",
+      "status": "rent",
+      "featured": false,
+      "type": "apartment",
+      "city": "dhaka",
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 22000, "bn": "৳ ২২,০০০/মাস", "en": "৳ 22,000/mo" },
+      "title": { "bn": "উত্তরা সেক্টর-৭ ফার্নিশড ফ্ল্যাট", "en": "Uttara Sector-7 Furnished Flat" },
+      "location": { "bn": "উত্তরা সেক্টর-৭, ঢাকা", "en": "Uttara Sector-7, Dhaka" },
+      "mapQuery": "Uttara Sector 7, Dhaka, Bangladesh",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1150,
+      "desc": {
+        "bn": "সম্পূর্ণ ফার্নিশড ৩ বেডরুমের ফ্ল্যাট — সেক্টর-৭ এর শান্ত আবাসিক এলাকায়। তাৎক্ষণিক মুভ-ইনের জন্য প্রস্তুত; আশপাশে স্কুল, হাসপাতাল ও শপিং মল।",
+        "en": "Fully furnished 3-bedroom flat in the calm residential area of Sector-7, Uttara. Ready for immediate move-in with schools, hospitals and malls nearby."
+      },
+      "features": {
+        "bn": ["সম্পূর্ণ ফার্নিশড", "এসি (২ রুমে)", "লিফট", "জেনারেটর", "গ্যাস লাইন", "ব্রডব্যান্ড রেডি", "CCTV"],
+        "en": ["Fully furnished", "AC (2 rooms)", "Elevator", "Generator", "Gas line", "Broadband ready", "CCTV"]
+      }
+    },
+    {
+      "id": "P-105",
+      "status": "rent",
+      "featured": false,
+      "type": "apartment",
+      "city": "dhaka",
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 45000, "bn": "৳ ৪৫,০০০/মাস", "en": "৳ 45,000/mo" },
+      "title": { "bn": "বনানী মডার্ন ফার্নিশড ফ্ল্যাট", "en": "Banani Modern Furnished Flat" },
+      "location": { "bn": "বনানী রোড-১১, ঢাকা", "en": "Banani Road-11, Dhaka" },
+      "mapQuery": "Banani Road 11, Dhaka, Bangladesh",
+      "beds": 2,
+      "baths": 2,
+      "sqft": 950,
+      "desc": {
+        "bn": "বনানী রোড-১১ এর কাছে মডার্ন ফার্নিশড ২ বেডের ফ্ল্যাট — এক্সপ্যাট ও ফ্রিল্যান্সারদের জন্য আদর্শ। জিম, সুপারশপ ও ক্যাফে হাতের নাগালে।",
+        "en": "Modern furnished 2-bed flat near Road-11, Banani — ideal for expats and freelancers, with gyms, superstores and cafés close by."
+      },
+      "features": {
+        "bn": ["সম্পূর্ণ ফার্নিশড", "এসি", "জিম অ্যাক্সেস", "লিফট", "জেনারেটর", "হাই-স্পিড ইন্টারনেট", "রূফটপ লাউঞ্জ"],
+        "en": ["Fully furnished", "Air conditioned", "Gym access", "Elevator", "Generator", "High-speed internet", "Rooftop lounge"]
+      }
+    },
+    {
+      "id": "P-106",
+      "status": "sale",
+      "featured": true,
+      "type": "house",
+      "city": "chattogram",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 17500000, "bn": "৳ ১.৭৫ কোটি", "en": "৳ 1.75 Cr" },
+      "title": { "bn": "খুলশী হিলভিউ ডুপ্লেক্স", "en": "Khulshi Hillview Duplex" },
+      "location": { "bn": "খুলশী, চট্টগ্রাম", "en": "Khulshi, Chattogram" },
+      "mapQuery": "Khulshi, Chattogram, Bangladesh",
+      "beds": 4,
+      "baths": 4,
+      "sqft": 2600,
+      "desc": {
+        "bn": "খুলশীর কুইয়েট হিলসাইড রোডে আধুনিক ডুপ্লেক্স বাড়ি — পাহাড় ও সবুজে ঘেরা, বিশাল বারান্দা ও ছাদবাগানের সুবিধা। পরিবারের জন্য শান্ত ও সুরক্ষিত পরিবেশ।",
+        "en": "A modern duplex on Khulshi's quiet hillside road surrounded by hills and greenery — huge verandas and a rooftop garden. A calm, secure environment for families."
+      },
+      "features": {
+        "bn": ["৪ বেডরুম ডুপ্লেক্স", "আটাচ বাথ ×৪", "ছাদবাগান", "২টি কার পার্কিং", "গ্যাস লাইন", "ড্রাইভওয়ে", "সার্ভেন্ট রুম", "ওপেন টেরেস"],
+        "en": ["4-bed duplex", "4 attached baths", "Rooftop garden", "2 car parking", "Gas line", "Driveway", "Servant room", "Open terrace"]
+      }
+    },
+    {
+      "id": "P-107",
+      "status": "rent",
+      "featured": false,
+      "type": "office",
+      "city": "chattogram",
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 80000, "bn": "৳ ৮০,০০০/মাস", "en": "৳ 80,000/mo" },
+      "title": { "bn": "আগ্রাবাদ কমার্শিয়াল অফিস স্পেস", "en": "Agrabad Commercial Office Space" },
+      "location": { "bn": "আগ্রাবাদ, চট্টগ্রাম", "en": "Agrabad, Chattogram" },
+      "mapQuery": "Agrabad Commercial Area, Chattogram, Bangladesh",
+      "beds": null,
+      "baths": 2,
+      "sqft": 1800,
+      "desc": {
+        "bn": "আগ্রাবাদ বাণিজ্যিক এলাকার কেন্দ্রে ফুলি-ফার্নিশড অফিস স্পেস — লিফট, জেনারেটর ব্যাকআপ ও ২৪/৭ সিকিউরিটিসহ। করপোরেট অফিস সেটআপের জন্য প্রস্তুত।",
+        "en": "Fully-fitted office space in the heart of Agrabad business district with elevator, generator backup and 24/7 security — ready for corporate setup."
+      },
+      "features": {
+        "bn": ["ফুলি-ফার্নিশড অফিস", "লিফট", "১০০% জেনারেটর ব্যাকআপ", "২৪/৭ সিকিউরিটি", "প্রশস্ত লবি", "পার্কিং স্পেস", "ফায়ার সেফটি"],
+        "en": ["Fully-fitted office", "Elevator", "100% generator backup", "24/7 security", "Spacious lobby", "Parking space", "Fire safety"]
+      }
+    },
+    {
+      "id": "P-108",
+      "status": "sale",
+      "featured": true,
+      "type": "apartment",
+      "city": "sylhet",
+      "image": "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=900&q=70",
+      "price": { "value": 8500000, "bn": "৳ ৮৫ লাখ", "en": "৳ 85 Lakh" },
+      "title": { "bn": "উপশহর গ্রিন ভিউ অ্যাপার্টমেন্ট", "en": "Uposhohor Green View Apartment" },
+      "location": { "bn": "উপশহর ব্লক-ডি, সিলেট", "en": "Uposhohor Block-D, Sylhet" },
+      "mapQuery": "Uposhohor Block D, Sylhet, Bangladesh",
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1300,
+      "desc": {
+        "bn": "উপশহর ব্লক-ডি-তে ৩ বেডরুমের আধুনিক অ্যাপার্টমেন্ট — সিলেট শহরের কেন্দ্রে, চা-বাগান শহরের সবুজ পরিবেশে। প্রবাসী পরিবারদের প্রথম পছন্দ।",
+        "en": "A modern 3-bedroom apartment in Uposhohor Block-D, right in the heart of Sylhet city — a top pick for expatriate families."
+      },
+      "features": {
+        "bn": ["লিফট", "জেনারেটর", "কার পার্কিং", "গ্যাস লাইন", "প্লে এরিয়া", "মসজিদ", "CCTV সিকিউরিটি"],
+        "en": ["Elevator", "Generator", "Car parking", "Gas line", "Play area", "Mosque", "CCTV security"]
+      }
+    }
+  ]
+}

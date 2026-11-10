@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#006A4E">
+  <meta name="description" content="বাড়িখোঁজ (BariKhoj) — বাংলাদেশের বিশ্বস্ত রিয়েল এস্টেট প্ল্যাটফর্ম। ঢাকা, চট্টগ্রাম ও সিলেটের যাচাইকৃত অ্যাপার্টমেন্ট, বাড়ি ও অফিস স্পেস। Trusted real estate platform in Bangladesh.">
+  <meta property="og:title" content="বাড়িখোঁজ | BariKhoj — আপনার স্বপ্নের ঠিকানা">
+  <meta property="og:description" content="১,০০০+ যাচাইকৃত প্রপার্টি — ঢাকা, চট্টগ্রাম ও সিলেট। স্বচ্ছ মূল্য, যাচাইকৃত দলিল ও সম্পূর্ণ আইনি সহায়তা।">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=70">
+  <meta property="og:type" content="website">
+  <title data-bn="বাড়িখোঁজ — আপনার স্বপ্নের ঠিকানা | বাংলাদেশের বিশ্বস্ত রিয়েল এস্টেট" data-en="BariKhoj — Your Dream Address | Trusted Real Estate in Bangladesh">বাড়িখোঁজ — আপনার স্বপ্নের ঠিকানা | বাংলাদেশের বিশ্বস্ত রিয়েল এস্টেট</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Preloader ===== -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-box">
+      <svg class="loader-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M6 22L24 7l18 15" stroke="#E9B44C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 20v22h26V20" stroke="#0A8F6C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 42V30h6v12" stroke="#0A8F6C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="loader-text" data-bn="বাড়িখোঁজ" data-en="BariKhoj">বাড়িখোঁজ</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== Scroll Progress ===== -->
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- ===== Header / Sticky Navigation ===== -->
+  <header id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo" aria-label="BariKhoj home">
+        <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M6 22L24 7l18 15" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lm-roof"/>
+          <path d="M11 20v22h26V20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 42V30h6v12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo-text" data-bn="বাড়িখোঁজ" data-en="BariKhoj">বাড়িখোঁজ</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link active"><span data-bn="হোম" data-en="Home">হোম</span></a></li>
+          <li><a href="#properties" class="nav-link"><span data-bn="প্রপার্টি" data-en="Properties">প্রপার্টি</span></a></li>
+          <li><a href="#locations" class="nav-link"><span data-bn="লোকেশন" data-en="Locations">লোকেশন</span></a></li>
+          <li><a href="#services" class="nav-link"><span data-bn="সেবা" data-en="Services">সেবা</span></a></li>
+          <li><a href="#testimonials" class="nav-link"><span data-bn="রিভিউ" data-en="Reviews">রিভিউ</span></a></li>
+          <li><a href="#contact" class="nav-link"><span data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="chip-btn" type="button" aria-label="Switch language">
+          <i class="fa-solid fa-globe"></i><span id="langLabel">EN</span>
+        </button>
+        <button id="themeToggle" class="chip-btn" type="button" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta"><span data-bn="ফ্রি কনসালটেশন" data-en="Free Consultation">ফ্রি কনসালটেশন</span></a>
+        <button id="menuBtn" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+          <i class="fa-solid fa-bars" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main>
+    <!-- ===== Hero Section ===== -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1920&q=75" alt="Modern residential apartments in Dhaka, Bangladesh" data-alt-bn="ঢাকার আধুনিক আবাসিক অ্যাপার্টমেন্ট" data-alt-en="Modern residential apartments in Dhaka" fetchpriority="high">
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-left">
+          <span class="hero-badge" data-reveal="up"><i class="fa-solid fa-location-dot"></i><span data-bn="🇧🇩 বাংলাদেশের বিশ্বস্ত রিয়েল এস্টেট প্ল্যাটফর্ম" data-en="🇧🇩 Bangladesh's Trusted Real Estate Platform">🇧🇩 বাংলাদেশের বিশ্বস্ত রিয়েল এস্টেট প্ল্যাটফর্ম</span></span>
+
+          <h1 class="hero-title" data-reveal="up" data-delay="0.1">
+            <span data-bn="আপনার স্বপ্নের" data-en="Find Your">আপনার স্বপ্নের</span>
+            <span class="typed-grad"><span id="typedText">বাড়ি</span><span class="caret"></span></span>
+            <span data-bn="খুঁজুন — বাড়িখোঁজের সাথে" data-en="with BariKhoj">খুঁজুন — বাড়িখোঁজের সাথে</span>
+          </h1>
+
+          <p class="hero-sub" data-reveal="up" data-delay="0.2" data-bn="১,০০০+ যাচাইকৃত অ্যাপার্টমেন্ট, বাড়ি ও অফিস স্পেস — ঢাকা, চট্টগ্রাম ও সিলেটসহ সারা বাংলাদেশে। সম্পূর্ণ স্বচ্ছ মূল্য, যাচাইকৃত দলিল ও আইনি সহায়তা।" data-en="1,000+ verified apartments, homes & office spaces across Dhaka, Chattogram, Sylhet & beyond — with transparent pricing, verified documents and full legal support.">১,০০০+ যাচাইকৃত অ্যাপার্টমেন্ট, বাড়ি ও অফিস স্পেস — ঢাকা, চট্টগ্রাম ও সিলেটসহ সারা বাংলাদেশে। সম্পূর্ণ স্বচ্ছ মূল্য, যাচাইকৃত দলিল ও আইনি সহায়তা।</p>
+
+          <form class="hero-search" id="heroSearch" data-reveal="up" data-delay="0.3" autocomplete="off">
+            <div class="hs-item">
+              <label for="hsCity" data-bn="লোকেশন" data-en="Location">লোকেশন</label>
+              <select id="hsCity">
+                <option value="all" data-bn="সব লোকেশন" data-en="All Locations">সব লোকেশন</option>
+                <option value="dhaka" data-bn="ঢাকা" data-en="Dhaka">ঢাকা</option>
+                <option value="chattogram" data-bn="চট্টগ্রাম" data-en="Chattogram">চট্টগ্রাম</option>
+                <option value="sylhet" data-bn="সিলেট" data-en="Sylhet">সিলেট</option>
+              </select>
+            </div>
+            <div class="hs-item">
+              <label for="hsType" data-bn="ধরন" data-en="Type">ধরন</label>
+              <select id="hsType">
+                <option value="any" data-bn="সব ধরন" data-en="All Types">সব ধরন</option>
+                <option value="apartment" data-bn="অ্যাপার্টমেন্ট" data-en="Apartment">অ্যাপার্টমেন্ট</option>
+                <option value="house" data-bn="বাড়ি বা ডুপ্লেক্স" data-en="House / Duplex">বাড়ি বা ডুপ্লেক্স</option>
+                <option value="office" data-bn="অফিস স্পেস" data-en="Office Space">অফিস স্পেস</option>
+              </select>
+            </div>
+            <div class="hs-item">
+              <label for="hsBudget" data-bn="বাজেট" data-en="Budget">বাজেট</label>
+              <select id="hsBudget">
+                <option value="any" data-bn="যেকোনো বাজেট" data-en="Any budget">যেকোনো বাজেট</option>
+                <option value="lt1cr" data-bn="১ কোটির নিচে" data-en="Under ৳1 Cr">১ কোটির নিচে</option>
+                <option value="1to2cr" data-bn="১–২ কোটি" data-en="৳1 – 2 Cr">১–২ কোটি</option>
+                <option value="gt2cr" data-bn="২ কোটির বেশি" data-en="Above ৳2 Cr">২ কোটির বেশি</option>
+                <option value="rent" data-bn="ভাড়ার প্রপার্টি" data-en="For rent">ভাড়ার প্রপার্টি</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-accent hs-btn"><i class="fa-solid fa-magnifying-glass"></i><span data-bn="খুঁজুন" data-en="Search">খুঁজুন</span></button>
+          </form>
+
+          <div class="hero-ctas" data-reveal="up" data-delay="0.4">
+            <a href="#properties" class="btn btn-primary btn-lg"><span data-bn="প্রপার্টি দেখুন" data-en="Browse Properties">প্রপার্টি দেখুন</span><i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-ghost btn-lg"><i class="fa-solid fa-phone"></i><span data-bn="ফ্রি পরামর্শ নিন" data-en="Free Consultation">ফ্রি পরামর্শ নিন</span></a>
+          </div>
+
+          <div class="hero-trust" data-reveal="up" data-delay="0.5">
+            <div class="trust-avatars">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client avatar" data-alt-bn="ক্লায়েন্ট অবতার" data-alt-en="Client avatar" loading="lazy" class="avatar-img">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client avatar" data-alt-bn="ক্লায়েন্ট অবতার" data-alt-en="Client avatar" loading="lazy" class="avatar-img">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client avatar" data-alt-bn="ক্লায়েন্ট অবতার" data-alt-en="Client avatar" loading="lazy" class="avatar-img">
+              <span class="trust-count">১২০০+</span>
+            </div>
+            <div class="trust-text">
+              <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+              <span data-bn="১,২০০+ পরিবার তাদের স্বপ্নের ঠিকানা পেয়েছে" data-en="1,200+ families found their dream address">১,২০০+ পরিবার তাদের স্বপ্নের ঠিকানা পেয়েছে</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="hero-shape s1"></div>
+          <div class="hero-shape s2"></div>
+          <div class="float-card fc-1">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=300&q=60" alt="Gulshan penthouse" loading="lazy">
+            <div class="fc-info">
+              <b data-bn="গুলশান-২ পেন্টহাউস" data-en="Gulshan-2 Penthouse">গুলশান-২ পেন্টহাউস</b>
+              <span class="fc-price" data-bn="৳ ৩.২০ কোটি" data-en="৳ 3.20 Cr">৳ ৩.২০ কোটি</span>
+              <span class="fc-loc"><i class="fa-solid fa-location-dot"></i> <span data-bn="গুলশান-২, ঢাকা" data-en="Gulshan-2, Dhaka">গুলশান-২, ঢাকা</span></span>
+            </div>
+          </div>
+          <div class="float-card fc-2">
+            <span class="fc-ico ok"><i class="fa-solid fa-check"></i></span>
+            <div class="fc-info">
+              <b data-bn="১০০% যাচাইকৃত দলিল" data-en="100% Verified Documents">১০০% যাচাইকৃত দলিল</b>
+              <span data-bn="আইনি টিম দ্বারা সমর্থিত" data-en="Backed by our legal team">আইনি টিম দ্বারা সমর্থিত</span>
+            </div>
+          </div>
+          <div class="float-card fc-3">
+            <span class="fc-ico gold"><i class="fa-solid fa-star"></i></span>
+            <div class="fc-info">
+              <b data-bn="৪.৯/৫" data-en="4.9/5">৪.৯/৫</b>
+              <span data-bn="১,২০০+ ক্লায়েন্ট রিভিউ" data-en="1,200+ client reviews">১,২০০+ ক্লায়েন্ট রিভিউ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#why" class="scroll-down" aria-label="Scroll down">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span data-bn="স্ক্রল করুন" data-en="Scroll">স্ক্রল করুন</span>
+      </a>
+    </section>
+
+    <!-- ===== Why BariKhoj + Stats ===== -->
+    <section id="why" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal="up">
+          <span class="sec-eyebrow" data-bn="কেন বাড়িখোঁজ?" data-en="Why BariKhoj?">কেন বাড়িখোঁজ?</span>
+          <h2 class="sec-title" data-html data-bn="যে কারণে হাজারো পরিবার <span>আমাদের ভরসা</span> করে" data-en="Why thousands of families <span>trust us</span>">যে কারণে হাজারো পরিবার <span>আমাদের ভরসা</span> করে</h2>
+          <p class="sec-sub" data-bn="১৫+ বছরের অভিজ্ঞতা, আইনি বিশেষজ্ঞ টিম ও স্বচ্ছ প্রক্রিয়া — প্রপার্টি লেনদেন এখন একদম ঝামেলাহীন।" data-en="15+ years of experience, an expert legal team and a transparent process — property transactions have never been this stress-free.">১৫+ বছরের অভিজ্ঞতা, আইনি বিশেষজ্ঞ টিম ও স্বচ্ছ প্রক্রিয়া — প্রপার্টি লেনদেন এখন একদম ঝামেলাহীন।</p>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card" data-reveal="up">
+            <span class="why-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <h3 data-bn="১০০% যাচাইকৃত প্রপার্টি" data-en="100% Verified Properties">১০০% যাচাইকৃত প্রপার্টি</h3>
+            <p data-bn="প্রতিটি লিস্টিংয়ের দলিল, খতিয়ান ও মালিকানা আমাদের আইনি টিম দ্বারা সরাসরি যাচাই করা হয়।" data-en="Every listing's deed, khatian and ownership is directly verified by our legal team.">প্রতিটি লিস্টিংয়ের দলিল, খতিয়ান ও মালিকানা আমাদের আইনি টিম দ্বারা সরাসরি যাচাই করা হয়।</p>
+          </article>
+          <article class="why-card" data-reveal="up" data-delay="0.1">
+            <span class="why-icon"><i class="fa-solid fa-handshake"></i></span>
+            <h3 data-bn="স্বচ্ছ মূল্য নীতি" data-en="Transparent Pricing">স্বচ্ছ মূল্য নীতি</h3>
+            <p data-bn="কোনো লুকানো চার্জ নেই — প্রতিটি লেনদেন বাজারসম্মত ও সম্পূর্ণ প্রকাশ্য মূল্যে।" data-en="No hidden charges — every transaction happens at a fair, fully disclosed market price.">কোনো লুকানো চার্জ নেই — প্রতিটি লেনদেন বাজারসম্মত ও সম্পূর্ণ প্রকাশ্য মূল্যে।</p>
+          </article>
+          <article class="why-card" data-reveal="up" data-delay="0.2">
+            <span class="why-icon"><i class="fa-solid fa-file-signature"></i></span>
+            <h3 data-bn="আইনি ও রেজিস্ট্রেশন সাপোর্ট" data-en="Legal & Registration Support">আইনি ও রেজিস্ট্রেশন সাপোর্ট</h3>
+            <p data-bn="দলিল রেজিস্ট্রেশন, মিউটেশন, ভ্যাট ও স্ট্যাম্প ডিউটি — সম্পূর্ণ প্রক্রিয়ায় আমরা পাশে থাকি।" data-en="Deed registration, mutation, VAT and stamp duty — we stay by your side through the entire process.">দলিল রেজিস্ট্রেশন, মিউটেশন, ভ্যাট ও স্ট্যাম্প ডিউটি — সম্পূর্ণ প্রক্রিয়ায় আমরা পাশে থাকি।</p>
+          </article>
+          <article class="why-card" data-reveal="up" data-delay="0.3">
+            <span class="why-icon"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+            <h3 data-bn="হোম লোন সহায়তা" data-en="Home Loan Assistance">হোম লোন সহায়তা</h3>
+            <p data-bn="DBH, IDLC, BRAC ব্যাংকসহ শীর্ষ আর্থিক প্রতিষ্ঠানের সাথে সেরা হারে দ্রুত লোন অনুমোদন।" data-en="Fast loan approval at the best rates with DBH, IDLC, BRAC Bank and other leading financial institutions.">DBH, IDLC, BRAC ব্যাংকসহ শীর্ষ আর্থিক প্রতিষ্ঠানের সাথে সেরা হারে দ্রুত লোন অনুমোদন।</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="stats-band" data-reveal="zoom">
+        <div class="container stats-grid">
+          <div class="stat">
+            <span class="stat-num" data-count="850" data-suffix="+">০</span>
+            <span class="stat-label" data-bn="সফল লেনদেন" data-en="Successful Transactions">সফল লেনদেন</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="1200" data-suffix="+">০</span>
+            <span class="stat-label" data-bn="সন্তুষ্ট ক্লায়েন্ট" data-en="Happy Clients">সন্তুষ্ট ক্লায়েন্ট</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="15" data-suffix="+">০</span>
+            <span class="stat-label" data-bn="বছরের অভিজ্ঞতা" data-en="Years of Experience">বছরের অভিজ্ঞতা</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="98" data-suffix="%">০</span>
+            <span class="stat-label" data-bn="ক্লায়েন্ট সন্তুষ্টি" data-en="Client Satisfaction">ক্লায়েন্ট সন্তুষ্টি</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Properties ===== -->
+    <section id="properties" class="section section-alt">
+      <div class="container">
+        <div class="sec-head" data-reveal="up">
+          <span class="sec-eyebrow" data-bn="আমাদের লিস্টিং" data-en="Our Listings">আমাদের লিস্টিং</span>
+          <h2 class="sec-title" data-html data-bn="ফিচার্ড <span>প্রপার্টিসমূহ</span>" data-en="Featured <span>Properties</span>">ফিচার্ড <span>প্রপার্টিসমূহ</span></h2>
+          <p class="sec-sub" data-bn="আপনার বাজেট ও পছন্দের লোকেশনে সেরা নির্বাচন — প্রতিটি প্রপার্টি আইনগতভাবে যাচাইকৃত।" data-en="The finest selection for your budget and preferred location — every property legally verified.">আপনার বাজেট ও পছন্দের লোকেশনে সেরা নির্বাচন — প্রতিটি প্রপার্টি আইনগতভাবে যাচাইকৃত।</p>
+        </div>
+
+        <div class="filter-bar" data-reveal="up">
+          <div class="tabs" id="statusTabs" role="tablist">
+            <button class="tab active" type="button" data-status="all"><span data-bn="সব প্রপার্টি" data-en="All">সব প্রপার্টি</span></button>
+            <button class="tab" type="button" data-status="sale"><span data-bn="বিক্রয়ের জন্য" data-en="For Sale">বিক্রয়ের জন্য</span></button>
+            <button class="tab" type="button" data-status="rent"><span data-bn="ভাড়ার জন্য" data-en="For Rent">ভাড়ার জন্য</span></button>
+          </div>
+          <div class="filter-selects">
+            <select id="cityFilter" class="f-select" aria-label="Filter by city">
+              <option value="all" data-bn="সব লোকেশন" data-en="All Locations">সব লোকেশন</option>
+              <option value="dhaka" data-bn="ঢাকা" data-en="Dhaka">ঢাকা</option>
+              <option value="chattogram" data-bn="চট্টগ্রাম" data-en="Chattogram">চট্টগ্রাম</option>
+              <option value="sylhet" data-bn="সিলেট" data-en="Sylhet">সিলেট</option>
+            </select>
+            <select id="typeFilter" class="f-select" aria-label="Filter by type">
+              <option value="any" data-bn="সব ধরন" data-en="All Types">সব ধরন</option>
+              <option value="apartment" data-bn="অ্যাপার্টমেন্ট" data-en="Apartment">অ্যাপার্টমেন্ট</option>
+              <option value="house" data-bn="বাড়ি বা ডুপ্লেক্স" data-en="House / Duplex">বাড়ি বা ডুপ্লেক্স</option>
+              <option value="office" data-bn="অফিস স্পেস" data-en="Office Space">অফিস স্পেস</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="props-meta" id="propsCount" data-reveal="up"></p>
+
+        <div class="prop-grid" id="propertyGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <i class="fa-solid fa-house-circle-exclamation"></i>
+          <h3 data-bn="কোনো প্রপার্টি পাওয়া যায়নি" data-en="No properties found">কোনো প্রপার্টি পাওয়া যায়নি</h3>
+          <p data-bn="ফিল্টার পরিবর্তন করে আবার চেষ্টা করুন অথবা আমাদের হটলাইনে কল করুন।" data-en="Try changing the filters or call our hotline.">ফিল্টার পরিবর্তন করে আবার চেষ্টা করুন অথবা আমাদের হটলাইনে কল করুন।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Popular Locations ===== -->
+    <section id="locations" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal="up">
+          <span class="sec-eyebrow" data-bn="যেখানে আমরা কাজ করি" data-en="Where We Operate">যেখানে আমরা কাজ করি</span>
+          <h2 class="sec-title" data-html data-bn="বাংলাদেশের <span>জনপ্রিয় লোকেশনসমূহ</span>" data-en="Popular <span>Locations in Bangladesh</span>">বাংলাদেশের <span>জনপ্রিয় লোকেশনসমূহ</span></h2>
+          <p class="sec-sub" data-bn="দেশের সেরা আবাসিক ও বাণিজ্যিক এলাকায় আমাদের যাচাইকৃত লিস্টিং ব্রাউজ করুন।" data-en="Browse our verified listings in the country's finest residential and commercial areas.">দেশের সেরা আবাসিক ও বাণিজ্যিক এলাকায় আমাদের যাচাইকৃত লিস্টিং ব্রাউজ করুন।</p>
+        </div>
+
+        <div class="loc-grid">
+          <article class="loc-card" data-reveal="up" data-city="dhaka">
+            <div class="loc-img">
+              <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=65" alt="Dhaka city skyline at dusk" data-alt-bn="গোধূলিতে ঢাকা শহরের স্কাইলাইন" data-alt-en="Dhaka city skyline at dusk" loading="lazy">
+              <div class="loc-overlay"></div>
+            </div>
+            <div class="loc-body">
+              <h3 data-bn="ঢাকা" data-en="Dhaka">ঢাকা</h3>
+              <p data-bn="২৪০+ লিস্টিং • গুলশান, ধানমন্ডি, বসুন্ধরা, উত্তরা" data-en="240+ listings • Gulshan, Dhanmondi, Bashundhara, Uttara">২৪০+ লিস্টিং • গুলশান, ধানমন্ডি, বসুন্ধরা, উত্তরা</p>
+              <div class="loc-actions">
+                <button type="button" class="btn btn-primary btn-sm loc-btn"><span data-bn="প্রপার্টি দেখুন" data-en="View Properties">প্রপার্টি দেখুন</span><i class="fa-solid fa-arrow-right"></i></button>
+                <a class="loc-map" href="https://www.google.com/maps/search/?api=1&query=Gulshan%2C+Dhaka%2C+Bangladesh" target="_blank" rel="noopener" aria-label="Open Dhaka in Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="loc-card" data-reveal="up" data-delay="0.1" data-city="chattogram">
+            <div class="loc-img">
+              <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=65" alt="Chattogram port city" data-alt-bn="চট্টগ্রাম বন্দর নগরী" data-alt-en="Chattogram port city" loading="lazy">
+              <div class="loc-overlay"></div>
+            </div>
+            <div class="loc-body">
+              <h3 data-bn="চট্টগ্রাম" data-en="Chattogram">চট্টগ্রাম</h3>
+              <p data-bn="৮৫+ লিস্টিং • খুলশী, আগ্রাবাদ, পতেঙ্গা" data-en="85+ listings • Khulshi, Agrabad, Patenga">৮৫+ লিস্টিং • খুলশী, আগ্রাবাদ, পতেঙ্গা</p>
+              <div class="loc-actions">
+                <button type="button" class="btn btn-primary btn-sm loc-btn"><span data-bn="প্রপার্টি দেখুন" data-en="View Properties">প্রপার্টি দেখুন</span><i class="fa-solid fa-arrow-right"></i></button>
+                <a class="loc-map" href="https://www.google.com/maps/search/?api=1&query=Khulshi%2C+Chattogram%2C+Bangladesh" target="_blank" rel="noopener" aria-label="Open Chattogram in Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="loc-card" data-reveal="up" data-delay="0.2" data-city="sylhet">
+            <div class="loc-img">
+              <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=65" alt="Green tea garden hills of Sylhet" data-alt-bn="সিলেটের সবুজ চা-বাগান" data-alt-en="Green tea garden hills of Sylhet" loading="lazy">
+              <div class="loc-overlay"></div>
+            </div>
+            <div class="loc-body">
+              <h3 data-bn="সিলেট" data-en="Sylhet">সিলেট</h3>
+              <p data-bn="৬০+ লিস্টিং • উপশহর, শিবগঞ্জ, আম্বরখানা" data-en="60+ listings • Uposhohor, Shibganj, Amberkhana">৬০+ লিস্টিং • উপশহর, শিবগঞ্জ, আম্বরখানা</p>
+              <div class="loc-actions">
+                <button type="button" class="btn btn-primary btn-sm loc-btn"><span data-bn="প্রপার্টি দেখুন" data-en="View Properties">প্রপার্টি দেখুন</span><i class="fa-solid fa-arrow-right"></i></button>
+                <a class="loc-map" href="https://www.google.com/maps/search/?api=1&query=Uposhohor%2C+Sylhet%2C+Bangladesh" target="_blank" rel="noopener" aria-label="Open Sylhet in Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="sec-head" data-reveal="up">
+          <span class="sec-eyebrow" data-bn="যা যা করে থাকি" data-en="What We Do">যা যা করে থাকি</span>
+          <h2 class="sec-title" data-html data-bn="আমাদের <span>সেবাসমূহ</span>" data-en="Our <span>Services</span>">আমাদের <span>সেবাসমূহ</span></h2>
+          <p class="sec-sub" data-bn="ক্রয় থেকে রেজিস্ট্রেশন — প্রপার্টির প্রতিটি ধাপে আমাদের এক্সপার্ট সেবা।" data-en="From buying to registration — expert service at every step of your property journey.">ক্রয় থেকে রেজিস্ট্রেশন — প্রপার্টির প্রতিটি ধাপে আমাদের এক্সপার্ট সেবা।</p>
+        </div>
+
+        <div class="svc-grid">
+          <article class="svc-card" data-reveal="up">
+            <span class="svc-icon"><i class="fa-solid fa-house-circle-check"></i></span>
+            <h3 data-bn="প্রপার্টি ক্রয়" data-en="Property Buying">প্রপার্টি ক্রয়</h3>
+            <p data-bn="আপনার বাজেট ও প্রয়োজন অনুযায়ী যাচাইকৃত সেরা অপশন খুঁজে দিই — ভিজিট থেকে রেজিস্ট্রেশন পর্যন্ত।" data-en="We find you the best verified options within your budget — from site visits to registration.">আপনার বাজেট ও প্রয়োজন অনুযায়ী যাচাইকৃত সেরা অপশন খুঁজে দিই — ভিজিট থেকে রেজিস্ট্রেশন পর্যন্ত।</p>
+          </article>
+          <article class="svc-card" data-reveal="up" data-delay="0.1">
+            <span class="svc-icon"><i class="fa-solid fa-tags"></i></span>
+            <h3 data-bn="প্রপার্টি বিক্রয়" data-en="Property Selling">প্রপার্টি বিক্রয়</h3>
+            <p data-bn="সঠিক ভ্যালুয়েশন, প্রফেশনাল ফটোগ্রাফি ও ডিজিটাল বিপণনের মাধ্যমে দ্রুত ও সেরা মূল্যে বিক্রয়।" data-en="Accurate valuation, professional photography and digital marketing for a fast sale at the best price.">সঠিক ভ্যালুয়েশন, প্রফেশনাল ফটোগ্রাফি ও ডিজিটাল বিপণনের মাধ্যমে দ্রুত ও সেরা মূল্যে বিক্রয়।</p>
+          </article>
+          <article class="svc-card" data-reveal="up" data-delay="0.2">
+            <span class="svc-icon"><i class="fa-solid fa-key"></i></span>
+            <h3 data-bn="ভাড়া ব্যবস্থাপনা" data-en="Rental Management">ভাড়া ব্যবস্থাপনা</h3>
+            <p data-bn="ভাড়াটিয়া যাচাই, চুক্তি তৈরি ও মাসিক ব্যবস্থাপনা — মালিকের সম্পূর্ণ নিশ্চিন্তি।" data-en="Tenant screening, agreements and monthly management — complete peace of mind for owners.">ভাড়াটিয়া যাচাই, চুক্তি তৈরি ও মাসিক ব্যবস্থাপনা — মালিকের সম্পূর্ণ নিশ্চিন্তি।</p>
+          </article>
+          <article class="svc-card" data-reveal="up">
+            <span class="svc-icon"><i class="fa-solid fa-chart-line"></i></span>
+            <h3 data-bn="প্রপার্টি ভ্যালুয়েশন" data-en="Property Valuation">প্রপার্টি ভ্যালুয়েশন</h3>
+            <p data-bn="বাজারভিত্তিক সঠিক মূল্য নির্ধারণ — ক্রয়, বিক্রয় বা লোনের জন্য বিশ্বস্ত রিপোর্ট।" data-en="Accurate market-based valuation — a trusted report for buying, selling or loan purposes.">বাজারভিত্তিক সঠিক মূল্য নির্ধারণ — ক্রয়, বিক্রয় বা লোনের জন্য বিশ্বস্ত রিপোর্ট।</p>
+          </article>
+          <article class="svc-card" data-reveal="up" data-delay="0.1">
+            <span class="svc-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+            <h3 data-bn="আইনি সহায়তা" data-en="Legal Support">আইনি সহায়তা</h3>
+            <p data-bn="দলিল যাচাই, মিউটেশন, নামজারি ও রেজিস্ট্রেশন — অভিজ্ঞ আইনজীবী টিমের সহায়তা।" data-en="Deed verification, mutation, name transfer and registration — support from an expert lawyer team.">দলিল যাচাই, মিউটেশন, নামজারি ও রেজিস্ট্রেশন — অভিজ্ঞ আইনজীবী টিমের সহায়তা।</p>
+          </article>
+          <article class="svc-card" data-reveal="up" data-delay="0.2">
+            <span class="svc-icon"><i class="fa-solid fa-percent"></i></span>
+            <h3 data-bn="হোম লোন কনসালটেন্সি" data-en="Home Loan Consultancy">হোম লোন কনসালটেন্সি</h3>
+            <p data-bn="কাগজপত্র প্রস্তুতি থেকে অনুমোদন — সেরা হারে লোন নিশ্চিত করার সম্পূর্ণ গাইডলাইন।" data-en="From paperwork to approval — complete guidance to secure a loan at the best rate.">কাগজপত্র প্রস্তুতি থেকে অনুমোদন — সেরা হারে লোন নিশ্চিত করার সম্পূর্ণ গাইডলাইন।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="sec-head" data-reveal="up">
+          <span class="sec-eyebrow" data-bn="রিভিউ" data-en="Reviews">রিভিউ</span>
+          <h2 class="sec-title" data-html data-bn="ক্লায়েন্টদের <span>মতামত</span>" data-en="What Our <span>Clients Say</span>">ক্লায়েন্টদের <span>মতামত</span></h2>
+          <p class="sec-sub" data-bn="যাঁরা বাড়িখোঁজের সাথে স্বপ্নের ঠিকানা খুঁজে পেয়েছেন — তাঁদেরই গল্প।" data-en="Real stories from families who found their dream address with BariKhoj.">যাঁরা বাড়িখোঁজের সাথে স্বপ্নের ঠিকানা খুঁজে পেয়েছেন — তাঁদেরই গল্প।</p>
+        </div>
+
+        <div class="t-wrap" data-reveal="up">
+          <div class="t-viewport">
+            <div class="t-track" id="tTrack">
+              <div class="t-slide">
+                <div class="t-card">
+                  <i class="fa-solid fa-quote-left t-quote"></i>
+                  <p class="t-text" data-bn="বসুন্ধরায় প্রথম ফ্ল্যাট কেনার সময় দলিল থেকে রেজিস্ট্রেশন — প্রতিটি ধাপে বাড়িখোঁজ টিম পাশে ছিল। এত প্রফেশনাল সার্ভিস আগে কখনো অনুভব করিনি।" data-en="From deed verification to registration — the BariKhoj team stood by us at every step of buying our first flat in Bashundhara. I have never experienced such professional service.">বসুন্ধরায় প্রথম ফ্ল্যাট কেনার সময় দলিল থেকে রেজিস্ট্রেশন — প্রতিটি ধাপে বাড়িখোঁজ টিম পাশে ছিল। এত প্রফেশনাল সার্ভিস আগে কখনো অনুভব করিনি।</p>
+                  <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  <div class="t-person">
+                    <span class="t-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahat Karim" data-alt-bn="রাহাত করিম" data-alt-en="Rahat Karim" loading="lazy" class="avatar-img"></span>
+                    <div><b class="t-name" data-bn="রাহাত করিম" data-en="Rahat Karim">রাহাত করিম</b><span class="t-role" data-bn="সফটওয়্যার ইঞ্জিনিয়ার, ঢাকা" data-en="Software Engineer, Dhaka">সফটওয়্যার ইঞ্জিনিয়ার, ঢাকা</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="t-slide">
+                <div class="t-card">
+                  <i class="fa-solid fa-quote-left t-quote"></i>
+                  <p class="t-text" data-bn="প্রবাসে থেকে সিলেটে সম্পত্তি কেনা ছিল বড় চিন্তার — কিন্তু তারা ভিডিও কলে সাইট ভিজিট থেকে শুরু করে রেজিস্ট্রেশন পর্যন্ত সব কাজ সম্পন্ন করে দিয়েছে। ধন্যবাদ বাড়িখোঁজ!" data-en="Buying property in Sylhet from abroad felt risky — but they handled everything over video calls, from site visits to registration. Thank you, BariKhoj!">প্রবাসে থেকে সিলেটে সম্পত্তি কেনা ছিল বড় চিন্তার — কিন্তু তারা ভিডিও কলে সাইট ভিজিট থেকে শুরু করে রেজিস্ট্রেশন পর্যন্ত সব কাজ সম্পন্ন করে দিয়েছে। ধন্যবাদ বাড়িখোঁজ!</p>
+                  <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  <div class="t-person">
+                    <span class="t-avatar"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Tanvir Ahmed" data-alt-bn="তানভীর আহমেদ" data-alt-en="Tanvir Ahmed" loading="lazy" class="avatar-img"></span>
+                    <div><b class="t-name" data-bn="তানভীর আহমেদ" data-en="Tanvir Ahmed">তানভীর আহমেদ</b><span class="t-role" data-bn="প্রবাসী (লন্ডন), সিলেট" data-en="Expatriate (London), Sylhet">প্রবাসী (লন্ডন), সিলেট</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="t-slide">
+                <div class="t-card">
+                  <i class="fa-solid fa-quote-left t-quote"></i>
+                  <p class="t-text" data-bn="খুলশীতে আমাদের নতুন অ্যাপার্টমেন্ট — একদম আমাদের বাজেটের মধ্যে। তাদের যাচাইকৃত লিস্টিংয়ে ভরসা করে নিশ্চিন্তে কিনতে পেরেছি।" data-en="Our new apartment in Khulshi — exactly within our budget. Their verified listings let us buy with total peace of mind.">খুলশীতে আমাদের নতুন অ্যাপার্টমেন্ট — একদম আমাদের বাজেটের মধ্যে। তাদের যাচাইকৃত লিস্টিংয়ে ভরসা করে নিশ্চিন্তে কিনতে পেরেছি।</p>
+                  <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                  <div class="t-person">
+                    <span class="t-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Nusrat Jahan" data-alt-bn="ডা. নুসরাত জাহান" data-alt-en="Dr. Nusrat Jahan" loading="lazy" class="avatar-img"></span>
+                    <div><b class="t-name" data-bn="ডা. নুসরাত জাহান" data-en="Dr. Nusrat Jahan">ডা. নুসরাত জাহান</b><span class="t-role" data-bn="চিকিৎসক, চট্টগ্রাম" data-en="Physician, Chattogram">চিকিৎসক, চট্টগ্রাম</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="t-slide">
+                <div class="t-card">
+                  <i class="fa-solid fa-quote-left t-quote"></i>
+                  <p class="t-text" data-bn="ধানমন্ডিতে ফ্যামিলি ফ্ল্যাট ভাড়া নিয়েছি — ভাড়াটিয়া যাচাই থেকে চুক্তি, সব কিছু এত মসৃণ ছিল যে দুই সপ্তাহেই উঠে পড়েছি।" data-en="We rented a family flat in Dhanmondi — from tenant verification to the agreement, everything was so smooth that we moved in within two weeks.">ধানমন্ডিতে ফ্যামিলি ফ্ল্যাট ভাড়া নিয়েছি — ভাড়াটিয়া যাচাই থেকে চুক্তি, সব কিছু এত মসৃণ ছিল যে দুই সপ্তাহেই উঠে পড়েছি।</p>
+                  <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+                  <div class="t-person">
+                    <span class="t-avatar"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sharmin Sultana" data-alt-bn="শারমিন সুলতানা" data-alt-en="Sharmin Sultana" loading="lazy" class="avatar-img"></span>
+                    <div><b class="t-name" data-bn="শারমিন সুলতানা" data-en="Sharmin Sultana">শারমিন সুলতানা</b><span class="t-role" data-bn="বিশ্ববিদ্যালয় শিক্ষক, ঢাকা" data-en="University Teacher, Dhaka">বিশ্ববিদ্যালয় শিক্ষক, ঢাকা</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="t-controls">
+            <button class="t-btn" id="tPrev" type="button" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="t-dots" id="tDots"></div>
+            <button class="t-btn" id="tNext" type="button" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="sec-head" data-reveal="up">
+          <span class="sec-eyebrow" data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</span>
+          <h2 class="sec-title" data-html data-bn="আজই শুরু করুন <span>আপনার যাত্রা</span>" data-en="Start Your Journey <span>Today</span>">আজই শুরু করুন <span>আপনার যাত্রা</span></h2>
+          <p class="sec-sub" data-bn="ফর্মটি পূরণ করুন অথবা সরাসরি কল দিন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।" data-en="Fill out the form or call us directly — our team will get back to you within 24 hours.">ফর্মটি পূরণ করুন অথবা সরাসরি কল দিন — আমাদের টিম ২৪ ঘণ্টার মধ্যে যোগাযোগ করবে।</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="c-info" data-reveal="left">
+            <div class="c-cards">
+              <div class="c-card">
+                <span class="c-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <span class="c-label" data-bn="আমাদের অফিস" data-en="Our Office">আমাদের অফিস</span>
+                  <span class="c-value" data-bn="বাড়ি ১২, রোড ৫, গুলশান-১, ঢাকা ১২১২" data-en="House 12, Road 5, Gulshan-1, Dhaka 1212">বাড়ি ১২, রোড ৫, গুলশান-১, ঢাকা ১২১২</span>
+                </div>
+              </div>
+              <div class="c-card">
+                <span class="c-icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <span class="c-label" data-bn="হটলাইন" data-en="Hotline">হটলাইন</span>
+                  <a class="c-value" href="tel:+8801700000000" data-bn="+৮৮০ ১৭০০-০০০০০০০" data-en="+880 1700-0000000">+৮৮০ ১৭০০-০০০০০০০</a>
+                </div>
+              </div>
+              <div class="c-card">
+                <span class="c-icon"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <span class="c-label" data-bn="ইমেইল" data-en="Email">ইমেইল</span>
+                  <a class="c-value" href="mailto:info@barikhoj.com.bd">info@barikhoj.com.bd</a>
+                </div>
+              </div>
+              <div class="c-card">
+                <span class="c-icon"><i class="fa-solid fa-clock"></i></span>
+                <div>
+                  <span class="c-label" data-bn="অফিস সময়" data-en="Office Hours">অফিস সময়</span>
+                  <span class="c-value" data-bn="শনি – বৃহস্পতি, সকাল ৯টা – সন্ধ্যা ৭টা" data-en="Saturday – Thursday, 9 AM – 7 PM">শনি – বৃহস্পতি, সকাল ৯টা – সন্ধ্যা ৭টা</span>
+                </div>
+              </div>
+            </div>
+            <div class="c-map">
+              <iframe title="BariKhoj office location on Google Maps — Gulshan-1, Dhaka" src="https://maps.google.com/maps?q=Gulshan-1%2C%20Dhaka%2C%20Bangladesh&z=14&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="c-form-wrap" data-reveal="right">
+            <form id="contactForm" class="c-form" novalidate>
+              <div class="f-row">
+                <div class="f-group">
+                  <label for="cfName" data-bn="পূর্ণ নাম *" data-en="Full Name *">পূর্ণ নাম *</label>
+                  <input id="cfName" name="name" type="text" data-ph-bn="আপনার নাম লিখুন" data-ph-en="Enter your name">
+                  <small class="err" id="errName"></small>
+                </div>
+                <div class="f-group">
+                  <label for="cfPhone" data-bn="মোবাইল নম্বর *" data-en="Mobile Number *">মোবাইল নম্বর *</label>
+                  <input id="cfPhone" name="phone" type="tel" data-ph-bn="01XXXXXXXXX" data-ph-en="01XXXXXXXXX">
+                  <small class="err" id="errPhone"></small>
+                </div>
+              </div>
+              <div class="f-row">
+                <div class="f-group">
+                  <label for="cfEmail" data-bn="ইমেইল ঠিকানা" data-en="Email Address">ইমেইল ঠিকানা</label>
+                  <input id="cfEmail" name="email" type="email" data-ph-bn="example@mail.com" data-ph-en="example@mail.com">
+                  <small class="err" id="errEmail"></small>
+                </div>
+                <div class="f-group">
+                  <label for="cfInterest" data-bn="আপনার আগ্রহ" data-en="Your Interest">আপনার আগ্রহ</label>
+                  <select id="cfInterest" name="interest">
+                    <option value="buy" data-bn="প্রপার্টি ক্রয়" data-en="Buying a property">প্রপার্টি ক্রয়</option>
+                    <option value="sell" data-bn="প্রপার্টি বিক্রয়" data-en="Selling a property">প্রপার্টি বিক্রয়</option>
+                    <option value="rent" data-bn="ভাড়া" data-en="Rent">ভাড়া</option>
+                    <option value="legal" data-bn="আইনি পরামর্শ" data-en="Legal advice">আইনি পরামর্শ</option>
+                    <option value="other" data-bn="অন্যান্য" data-en="Other">অন্যান্য</option>
+                  </select>
+                </div>
+              </div>
+              <div class="f-group">
+                <label for="cfMessage" data-bn="বার্তা *" data-en="Message *">বার্তা *</label>
+                <textarea id="cfMessage" name="message" rows="5" data-ph-bn="আপনার প্রয়োজন সম্পর্কে লিখুন..." data-ph-en="Tell us what you are looking for..."></textarea>
+                <small class="err" id="errMsg"></small>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="cfSubmit"><i class="fa-solid fa-paper-plane"></i><span data-bn="বার্তা পাঠান" data-en="Send Message">বার্তা পাঠান</span></button>
+              <p class="conn-status" id="connStatus"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="f-brand">
+          <a href="#home" class="logo f-logo" aria-label="BariKhoj home">
+            <svg class="logo-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path d="M6 22L24 7l18 15" stroke="#E9B44C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 20v22h26V20" stroke="#7FE0C0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 42V30h6v12" stroke="#7FE0C0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="logo-text" data-bn="বাড়িখোঁজ" data-en="BariKhoj">বাড়িখোঁজ</span>
+          </a>
+          <p class="f-about" data-bn="বাংলাদেশের অন্যতম বিশ্বস্ত রিয়েল এস্টেট প্ল্যাটফর্ম। যাচাইকৃত প্রপার্টি, স্বচ্ছ মূল্য ও সম্পূর্ণ আইনি সহায়তায় আমরা হাজারো পরিবারের স্বপ্ন পূরণ করেছি।" data-en="One of Bangladesh's most trusted real estate platforms. Verified properties, transparent pricing and full legal support — we have helped thousands of families find their dream address.">বাংলাদেশের অন্যতম বিশ্বস্ত রিয়েল এস্টেট প্ল্যাটফর্ম। যাচাইকৃত প্রপার্টি, স্বচ্ছ মূল্য ও সম্পূর্ণ আইনি সহায়তায় আমরা হাজারো পরিবারের স্বপ্ন পূরণ করেছি।</p>
+          <div class="f-social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="f-col">
+          <h4 data-bn="দ্রুত লিংক" data-en="Quick Links">দ্রুত লিংক</h4>
+          <ul class="f-links">
+            <li><a href="#home"><span data-bn="হোম" data-en="Home">হোম</span></a></li>
+            <li><a href="#properties"><span data-bn="প্রপার্টি" data-en="Properties">প্রপার্টি</span></a></li>
+            <li><a href="#locations"><span data-bn="লোকেশন" data-en="Locations">লোকেশন</span></a></li>
+            <li><a href="#services"><span data-bn="সেবা" data-en="Services">সেবা</span></a></li>
+            <li><a href="#contact"><span data-bn="যোগাযোগ" data-en="Contact">যোগাযোগ</span></a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4 data-bn="জনপ্রিয় এলাকা" data-en="Popular Areas">জনপ্রিয় এলাকা</h4>
+          <ul class="f-links">
+            <li><a href="#properties"><span data-bn="গুলশান, ঢাকা" data-en="Gulshan, Dhaka">গুলশান, ঢাকা</span></a></li>
+            <li><a href="#properties"><span data-bn="ধানমন্ডি, ঢাকা" data-en="Dhanmondi, Dhaka">ধানমন্ডি, ঢাকা</span></a></li>
+            <li><a href="#properties"><span data-bn="বসুন্ধরা আর/এ, ঢাকা" data-en="Bashundhara R/A, Dhaka">বসুন্ধরা আর/এ, ঢাকা</span></a></li>
+            <li><a href="#properties"><span data-bn="উত্তরা, ঢাকা" data-en="Uttara, Dhaka">উত্তরা, ঢাকা</span></a></li>
+            <li><a href="#properties"><span data-bn="খুলশী, চট্টগ্রাম" data-en="Khulshi, Chattogram">খুলশী, চট্টগ্রাম</span></a></li>
+          </ul>
+        </div>
+
+        <div class="f-col">
+          <h4 data-bn="নিউজলেটার" data-en="Newsletter">নিউজলেটার</h4>
+          <p class="f-news-text" data-bn="নতুন লিস্টিং ও এক্সক্লুসিভ অফারের আপডেট সবার আগে পান।" data-en="Be the first to get new listings and exclusive offers.">নতুন লিস্টিং ও এক্সক্লুসিভ অফারের আপডেট সবার আগে পান।</p>
+          <form class="news-form" id="newsForm" novalidate>
+            <input type="email" id="nfEmail" data-ph-bn="আপনার ইমেইল" data-ph-en="Your email" aria-label="Email for newsletter">
+            <button class="btn btn-accent btn-sm" type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <ul class="f-contact">
+            <li><i class="fa-solid fa-location-dot"></i><span data-bn="গুলশান-১, ঢাকা ১২১২" data-en="Gulshan-1, Dhaka 1212">গুলশান-১, ঢাকা ১২১২</span></li>
+            <li><i class="fa-solid fa-phone"></i><span data-bn="+৮৮০ ১৭০০-০০০০০০০" data-en="+880 1700-0000000">+৮৮০ ১৭০০-০০০০০০০</span></li>
+            <li><i class="fa-solid fa-envelope"></i><span>info@barikhoj.com.bd</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container fb-inner">
+        <span id="year"></span>
+        <span class="made-with"><span data-bn="❤️ দিয়ে তৈরি বাংলাদেশে" data-en="Made with ❤️ in Bangladesh">❤️ দিয়ে তৈরি বাংলাদেশে</span> 🇧🇩</span>
+        <span class="fb-links">
+          <a href="#" data-bn="শর্তাবলী" data-en="Terms">শর্তাবলী</a>
+          <a href="#" data-bn="গোপনীয়তা নীতি" data-en="Privacy Policy">গোপনীয়তা নীতি</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Property Details Modal ===== -->
+  <div class="modal" id="propertyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Property details">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ===== Scroll to Top ===== -->
+  <button id="scrollTopBtn" class="scroll-top" type="button" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast-box" id="toastBox" aria-live="polite"></div>
+
+  <!-- ===== Scripts (separate files) ===== -->
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/fallback-data.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/properties.js" defer></script>
+  <script src="js/form.js" defer></script>
+</body>
+</html>
