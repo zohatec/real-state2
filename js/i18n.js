@@ -48,8 +48,19 @@ const I18N = (() => {
       if (v !== null) el.setAttribute('alt', v);
     });
 
+    // Language chip shows ONLY one of the two letters at a time —
+    // it displays the language you will switch TO (like a hamburger ⇄ cross toggle).
     const label = document.getElementById('langLabel');
-    if (label) label.textContent = lang === 'bn' ? 'EN' : 'বাংলা';
+    if (label) {
+      label.classList.remove('flip');
+      void label.offsetWidth; // restart the flip animation
+      label.textContent = lang === 'bn' ? 'EN' : 'BN';
+      label.classList.add('flip');
+    }
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+      langToggle.setAttribute('aria-label', lang === 'bn' ? 'Switch to English' : 'বাংলায় পরিবর্তন করুন');
+    }
 
     if (dispatch) {
       document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
