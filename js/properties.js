@@ -60,8 +60,10 @@
   }
 
   /* ---------- Templates ---------- */
-  function cardHTML(p) {
+  function cardHTML(p, i) {
     const bn = I18N.lang === 'bn';
+    // Staggered entrance: each card reveals a little later than the previous one.
+    const delay = Math.min((i || 0) * 0.07, 0.35).toFixed(2);
     const statusBadge = p.status === 'sale'
       ? `<span class="badge badge-sale">${bn ? 'বিক্রয়' : 'For Sale'}</span>`
       : `<span class="badge badge-rent">${bn ? 'ভাড়া' : 'For Rent'}</span>`;
@@ -73,7 +75,7 @@
     ].join('');
 
     return `
-      <article class="prop-card" data-id="${p.id}">
+      <article class="prop-card" data-id="${p.id}" data-reveal="up" data-delay="${delay}">
         <div class="prop-img">
           ${statusBadge}${featured}
           <img src="${p.image}" alt="${t(p.title)}" data-alt-bn="${t(p.title)}" data-alt-en="${t(p.title)}" loading="lazy">
@@ -149,8 +151,16 @@
     if (!grid) return;
     const list = filtered();
 
-    grid.innerHTML = list.map(cardHTML).join('');
+    grid.innerHTML = list.map((p, i) => cardHTML(p, i)).join('');
     emptyEl.hidden = list.length !== 0;
+
+    // Scroll-reveal animation for the freshly rendered cards (same system as the rest of the site).
+    if (typeof window.observeReveals === 'function') {
+      window.observeReveals(grid);
+    } else {
+      // Safety net: never leave cards invisible if the reveal helper is unavailable.
+      grid.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('revealed'));
+    }
 
     if (countEl) {
       countEl.innerHTML = I18N.lang === 'bn'
