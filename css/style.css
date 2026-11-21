@@ -46,14 +46,19 @@ html[data-theme="dark"] {
 /* ---------- 2. Base / Reset ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;   /* fallback */
+  overflow-x: clip;     /* kills horizontal scrollbar on every browser, keeps vertical scroll */
+}
 
 body {
   font-family: var(--font);
   background: var(--clr-bg);
   color: var(--clr-text);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: hidden;   /* fallback */
+  overflow-x: clip;
   transition: background .35s ease, color .35s ease;
 }
 
@@ -142,6 +147,27 @@ section[id] { scroll-margin-top: calc(var(--nav-h) + 12px); }
 }
 .chip-btn:hover { background: rgba(255, 255, 255, .28); transform: translateY(-2px); }
 
+/* --- Language toggle: shows ONLY one of "EN" / "BN" at a time --- */
+.lang-chip { min-width: 46px; justify-content: center; padding: 9px 12px; font-size: .8rem; }
+.lang-label { display: inline-block; min-width: 26px; text-align: center; font-weight: 700; letter-spacing: .5px; }
+.lang-label.flip { animation: langFlip .45s ease; }
+@keyframes langFlip {
+  0%   { opacity: 0; transform: translateY(-9px) scale(.8); }
+  60%  { opacity: 1; transform: translateY(2px) scale(1.05); }
+  100% { opacity: 1; transform: none; }
+}
+/* While the drawer is open the chips sit on top of its surface — restyle for contrast. */
+body.nav-open #navbar .chip-btn {
+  background: rgba(0, 106, 78, .1);
+  border-color: rgba(0, 106, 78, .25);
+  color: var(--clr-text);
+}
+html[data-theme="dark"] body.nav-open #navbar .chip-btn {
+  background: rgba(16, 196, 143, .12);
+  border-color: rgba(16, 196, 143, .3);
+  color: var(--clr-primary-2);
+}
+
 .stars { color: var(--clr-accent); display: inline-flex; gap: 3px; font-size: .85rem; }
 
 /* ---------- 4. Preloader ---------- */
@@ -222,7 +248,9 @@ section[id] { scroll-margin-top: calc(var(--nav-h) + 12px); }
 #navbar.scrolled .nav-link:hover { background: rgba(0, 106, 78, .09); }
 #navbar.scrolled .nav-link.active { background: rgba(0, 106, 78, .12); color: var(--clr-primary); }
 
-.nav-actions { display: flex; align-items: center; gap: 10px; }
+/* z-index 1090 keeps the header buttons (lang / theme / hamburger) painted ABOVE the
+   mobile drawer (.nav-links, z-index 1080) — both live inside #navbar's stacking context. */
+.nav-actions { display: flex; align-items: center; gap: 10px; position: relative; z-index: 1090; }
 #navbar.scrolled .chip-btn {
   background: rgba(0, 106, 78, .1);
   border-color: rgba(0, 106, 78, .22);
@@ -234,8 +262,37 @@ html[data-theme="dark"] #navbar.scrolled .chip-btn {
   color: var(--clr-primary-2);
 }
 
-.menu-btn { display: none; font-size: 1.4rem; color: #fff; padding: 8px; transition: color .3s; }
+/* --- Hamburger button: pure-CSS icon that morphs three-lines ↔ cross --- */
+.menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  transition: color .3s, background .3s;
+}
 #navbar.scrolled .menu-btn { color: var(--clr-text); }
+.menu-btn .hamb { position: relative; width: 22px; height: 16px; display: block; }
+.menu-btn .hamb span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2.6px;
+  border-radius: 4px;
+  background: currentColor;
+  transition: top .38s cubic-bezier(.22, 1, .36, 1), transform .38s cubic-bezier(.22, 1, .36, 1), opacity .25s ease;
+}
+.menu-btn .hamb span:nth-child(1) { top: 0; }
+.menu-btn .hamb span:nth-child(2) { top: 6.7px; }
+.menu-btn .hamb span:nth-child(3) { top: 13.4px; }
+.menu-btn.open .hamb span:nth-child(1) { top: 6.7px; transform: rotate(45deg); }
+.menu-btn.open .hamb span:nth-child(2) { opacity: 0; transform: translateX(-9px); }
+.menu-btn.open .hamb span:nth-child(3) { top: 6.7px; transform: rotate(-45deg); }
+/* While the drawer is open the button floats over its light/dark surface —
+   use the readable text color instead of white. */
+#navbar .menu-btn.open { color: var(--clr-text); }
 
 .nav-overlay {
   position: fixed;
@@ -528,9 +585,11 @@ html[data-theme="dark"] .float-card span { color: var(--clr-muted); }
 .why-card h3 { font-size: 1.08rem; margin-bottom: 10px; }
 .why-card p { color: var(--clr-muted); font-size: .93rem; }
 
-/* Stats band */
+/* Stats band — kept inside container width so it never touches the screen edges */
 .stats-band {
   margin-top: 80px;
+  margin-inline: auto;
+  width: min(1200px, 92%);
   background: var(--grad-brand);
   border-radius: 24px;
   padding: 44px 30px;
@@ -907,12 +966,14 @@ html[data-theme="dark"] .m-map iframe { filter: invert(90%) hue-rotate(180deg); 
 .t-dot.active { background: var(--clr-primary); width: 28px; border-radius: 20px; }
 
 /* ---------- 14. Contact ---------- */
-.contact-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 30px; align-items: start; }
-.c-cards { display: grid; gap: 14px; margin-bottom: 18px; }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 30px; align-items: start; }
+/* minmax(0, 1fr) stops long e-mail / phone strings from inflating the track (horizontal-overflow fix) */
+.c-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-bottom: 18px; }
 .c-card {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  min-width: 0;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-sm);
@@ -932,7 +993,8 @@ html[data-theme="dark"] .m-map iframe { filter: invert(90%) hue-rotate(180deg); 
   flex-shrink: 0;
 }
 .c-label { display: block; color: var(--clr-muted); font-size: .8rem; font-weight: 600; }
-.c-value { display: block; font-weight: 600; font-size: .96rem; }
+.c-value { display: block; font-weight: 600; font-size: .96rem; overflow-wrap: anywhere; }
+.c-card > div { min-width: 0; }
 .c-map { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--clr-border); }
 .c-map iframe { width: 100%; height: 250px; border: 0; display: block; }
 html[data-theme="dark"] .c-map iframe { filter: invert(90%) hue-rotate(180deg); }
@@ -969,10 +1031,12 @@ html[data-theme="dark"] .c-map iframe { filter: invert(90%) hue-rotate(180deg); 
 .footer { background: var(--clr-dark); color: rgba(255, 255, 255, .82); }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  /* minmax(0, …) prevents Bengali link text from stretching tracks wider than the viewport */
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
   gap: 36px;
   padding: 64px 0 46px;
 }
+.footer-grid > * { min-width: 0; }
 .f-logo { color: #fff; margin-bottom: 14px; }
 .f-about { font-size: .92rem; margin-bottom: 20px; max-width: 320px; }
 .f-social { display: flex; gap: 10px; }
@@ -1089,19 +1153,26 @@ html[data-theme="dark"] .c-map iframe { filter: invert(90%) hue-rotate(180deg); 
 
 @media (max-width: 992px) {
   .menu-btn { display: inline-flex; }
+  /* Mobile drawer — transform based slide-in, dynamic viewport height + inner scroll
+     so it stays full-screen and scrollable on every mobile browser (sticky-safe). */
   .nav-links {
     position: fixed;
     top: 0;
-    right: -320px;
+    right: 0;
     width: min(320px, 82vw);
     height: 100vh;
+    height: 100dvh;
     background: var(--clr-surface);
     z-index: 1080;
-    padding: 90px 26px 30px;
-    transition: right .4s cubic-bezier(.22, 1, .36, 1);
+    padding: 96px 26px max(30px, env(safe-area-inset-bottom));
+    transform: translateX(calc(100% + 24px));
+    visibility: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: transform .4s cubic-bezier(.22, 1, .36, 1), visibility .4s;
     box-shadow: var(--shadow-lg);
   }
-  .nav-links.open { right: 0; }
+  .nav-links.open { transform: none; visibility: visible; }
   .nav-links ul { flex-direction: column; align-items: stretch; gap: 6px; }
   .nav-link, #navbar .nav-link {
     color: var(--clr-text) !important;
@@ -1121,6 +1192,8 @@ html[data-theme="dark"] .c-map iframe { filter: invert(90%) hue-rotate(180deg); 
   .section { padding: 66px 0; }
   .sec-head { margin-bottom: 40px; }
   .nav-cta { display: none; }
+  .nav-actions { gap: 8px; }
+  .lang-chip { min-width: 42px; padding: 8px 10px; }
   .why-grid { grid-template-columns: 1fr; }
   .hero-search { grid-template-columns: 1fr; }
   .hs-btn { width: 100%; }
@@ -1145,6 +1218,10 @@ html[data-theme="dark"] .c-map iframe { filter: invert(90%) hue-rotate(180deg); 
   .typed-grad { white-space: normal; }
   .trust-avatars img, .trust-count { width: 38px; height: 38px; }
 }
+
+/* ---------- 18b. Grid children safety (horizontal overflow guard) ---------- */
+.why-grid > *, .prop-grid > *, .loc-grid > *, .svc-grid > *,
+.stats-grid > *, .contact-grid > *, .c-cards > *, .f-row > * { min-width: 0; }
 
 /* ---------- 19. Reduced Motion ---------- */
 @media (prefers-reduced-motion: reduce) {
