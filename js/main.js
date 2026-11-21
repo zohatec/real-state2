@@ -38,26 +38,33 @@
   /* ---------- Mobile drawer ---------- */
   const navLinks = document.getElementById('navLinks');
   const menuBtn = document.getElementById('menuBtn');
-  const menuIcon = document.getElementById('menuIcon');
   const navOverlay = document.getElementById('navOverlay');
 
-  function closeDrawer() {
-    navLinks.classList.remove('open');
-    navOverlay.classList.remove('show');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    menuIcon.classList.replace('fa-xmark', 'fa-bars');
-    document.body.style.overflow = '';
+  function setDrawer(open) {
+    navLinks.classList.toggle('open', open);
+    navOverlay.classList.toggle('show', open);
+    // The hamburger is a pure-CSS icon: .open morphs the three lines into a cross.
+    menuBtn.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    // Class on <body> restyles the header chips for contrast over the drawer.
+    document.body.classList.toggle('nav-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   }
+
+  function closeDrawer() { setDrawer(false); }
+
   if (menuBtn && navLinks && navOverlay) {
     menuBtn.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      navOverlay.classList.toggle('show', open);
-      menuBtn.setAttribute('aria-expanded', String(open));
-      menuIcon.classList.replace(open ? 'fa-bars' : 'fa-xmark', open ? 'fa-xmark' : 'fa-bars');
-      document.body.style.overflow = open ? 'hidden' : '';
+      setDrawer(!navLinks.classList.contains('open'));
     });
     navOverlay.addEventListener('click', closeDrawer);
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) closeDrawer();
+    });
+    // Block background page scrolling while swiping on the overlay (iOS Safari).
+    navOverlay.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
   }
 
   /* ---------- Scroll-spy (active nav link) ---------- */
@@ -186,11 +193,23 @@
       }
     });
   }, { threshold: 0.12 });
-  document.querySelectorAll('[data-reveal]').forEach(el => {
-    const delay = parseFloat(el.dataset.delay || '0');
-    el.style.setProperty('--rd', delay + 's');
-    revealObs.observe(el);
-  });
+
+  /**
+   * Observe every [data-reveal] element inside `root`.
+   * Re-usable: properties.js calls it after each dynamic render so
+   * freshly created cards animate in with the same scroll-reveal system.
+   */
+  function observeReveals(root) {
+    (root || document).querySelectorAll('[data-reveal]').forEach(el => {
+      if (el._rvSeen) return; // don't double-observe static elements
+      el._rvSeen = true;
+      const delay = parseFloat(el.dataset.delay || '0');
+      el.style.setProperty('--rd', delay + 's');
+      revealObs.observe(el);
+    });
+  }
+  window.observeReveals = observeReveals;
+  observeReveals();
 
   /* ---------- Testimonials slider ---------- */
   const track = document.getElementById('tTrack');
